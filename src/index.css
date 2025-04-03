@@ -4,6 +4,7 @@
 @theme {
   --color-brown: #e0ad7b;
   --color-brown-light: #e6e1dd;
+  --color-brown-dark: #2f2e2e;
   --font-montserrat: Montserrat, sans-serif;
   --font-inter: Inter, arial;
   --max-width-large: 2480px;
