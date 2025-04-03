@@ -164,7 +164,7 @@ function App() {
                 </div>
 
                 <div className="flex-1">
-                  <img src={buildingImage6} alt="Building image" className="block rounded-sm object-cover w-full h-full" />
+                  <img src={image} alt="Building image" className="block rounded-sm object-cover w-full h-full" />
                 </div>
               </div>
             ))
