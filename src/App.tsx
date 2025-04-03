@@ -49,7 +49,7 @@ function App() {
               </ul>
             </nav>
             <div className="flex items-center gap-2">
-              <button className="flex items-center justify-center text-white bg-brown rounded-sm px-4 h-10">
+              <button className="flex items-center justify-center text-brown-light bg-brown-dark rounded-sm px-4 h-10">
                 <span className='text-sm uppercase'>Contact</span>
               </button>
               <button className="w-10 aspect-square rounded-sm flex items-center justify-center text-gray-800 hover:bg-gray-100">
@@ -196,6 +196,7 @@ function App() {
                 <span className="tracking-tight">Get in touch</span>
               </button>
             </form>
+            <p className='text-xs text-center'>By submitting this form, you agree to our <a href="#" className="underline">privacy policy</a></p>
           </div>
         </div>
       </section>
