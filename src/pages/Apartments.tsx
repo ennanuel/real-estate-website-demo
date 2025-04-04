@@ -2,7 +2,7 @@
 
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import APARTMENTS from "../assets/APARTMENTS.json";
-import { apartment3dImage1, apartment3dImage2, apartment3dImage3, apartment3dImage4, buildingImage2, buildingInteriorImage1, buildingInteriorImage2, buildingIsometricImage1, buildingIsometricImage2, contactImage1, contactImage2 } from "../assets/images";
+import { apartment3dImage1, apartment3dImage2, apartment3dImage3, apartment3dImage4, buildingImage2, buildingInteriorImage1, buildingInteriorImage2, buildingIsometricImage1, buildingIsometricImage2, contactImage2 } from "../assets/images";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
