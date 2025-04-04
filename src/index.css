@@ -9,3 +9,12 @@
   --font-inter: Inter, arial;
   --max-width-large: 2480px;
 }
+
+html {
+  @apply font-montserrat;
+}
+
+a, button {
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+}
