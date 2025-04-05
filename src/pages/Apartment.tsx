@@ -8,48 +8,52 @@ export default function Apartment() {
     return (
         <div className="text-brown-dark">
             <section className="px-10 text-brown-dark">
-                <div className="mx-auto max-w-large py-20 min-h-[90vh] flex items-center justify-center gap-26">
+                <div className="mx-auto max-w-large py-20 min-h-screen flex flex-col gap-10">
                     <div className="flex flex-col gap-6 justify-center">
                         <h2 className="text-[3rem] leading-[3.6rem] max-w-[24ch] tracking-tighter">Two room apartment</h2>
-                        <div className="mt-4 flex items center justify-start gap-10">
-                            <span className="flex flex-col gap-1">
-                                <h3 className="text-3xl text-brown-dark">1st</h3>
-                                <p className="text-brown-dark/50">Floor</p>
-                            </span>
-                            <span className="flex flex-col gap-1">
-                                <h3 className="text-3xl  text-brown-dark">1,250 m<sup>2</sup></h3>
-                                <p className="text-brown-dark/50">Area</p>
-                            </span>
-                            <span className="flex flex-col gap-1">
-                                <h3 className="text-3xl text-brown-dark">6,200 RSD</h3>
-                                <p className="text-brown-dark/50">Price per m<sup>2</sup></p>
-                            </span>
+                        <div className="flex justify-between items-end gap-20">
+                            <div className="flex items center justify-start gap-10">
+                                <span className="flex flex-col gap-1">
+                                    <h3 className="text-3xl text-brown-dark">1st</h3>
+                                    <p className="text-brown-dark/50">Floor</p>
+                                </span>
+                                <span className="flex flex-col gap-1">
+                                    <h3 className="text-3xl  text-brown-dark">1,250 m<sup>2</sup></h3>
+                                    <p className="text-brown-dark/50">Area</p>
+                                </span>
+                                <span className="flex flex-col gap-1">
+                                    <h3 className="text-3xl text-brown-dark">6,200 RSD</h3>
+                                    <p className="text-brown-dark/50">Price per m<sup>2</sup></p>
+                                </span>
+                            </div>
+                            <button className="w-fit h-12 rounded-full border border-brown text-brown px-8 flex items-center justify-center gap-6">
+                                <span className="tracking-tight">Make inquiries</span>
+                                <GoArrowRight size={16} />
+                            </button>
                         </div>
-                        <button className="w-fit h-14 rounded-full bg-brown text-white px-8 flex items-center justify-center gap-6">
-                            <span className="tracking-tight">Make inquiries</span>
-                            <GoArrowRight size={16} />
-                        </button>
                     </div>
-                    <div className="flex-1 max-w-[560px] flex items-center justify-center">
-                        <img src={apartment3dImage2} alt="Apartment 3d image" className="w-full max-w-[560px] block rounded-sm h-auto object-cover" />
+                    <div className="flex-1 min-h-[400px] flex gap-6">
+                        <div className="flex-3 relative border border-brown-dark/20 rounded-sm overflow-hidden">
+                            <img src={apartment3dImage2} alt="Apartment 3d image" className="absolute top-0 left-0 w-full h-full object-contain" />
+                        </div>
                     </div>
                 </div>
             </section>
             <section className="px-10">
                 <div className="mx-auto pb-30 max-w-large min-h-screen">
-                    <div className="flex flex-col items-center justify-center text-center gap-4">
-                        <h3 className="text-4xl tracking-tighter">The base of the apartment</h3>
-                        <p className="text-brown-dark/50">
+                    <div className="flex flex-col gap-6">
+                        <h3 className="flex-2 text-[3rem] leading-[3.6rem] tracking-tighter">The base of the apartment</h3>
+                        <p className="flex-1 text-brown-dark/50">
                             <span>Show apartment</span><br />
                             <span>Floors I to V - Apartment no. 7, 16, 25, 34, 43</span>
                         </p>
                     </div>
-                    <div className="mt-20 flex border border-brown-dark">
-                        <div className="my-6 flex-1 relative">
-                            <img src={apartmentFloorPlan} className="object-contain w-full h-full absolute top-0 left-0 rounded-sm" alt="Apartment floor plan" />
+                    <div className="mt-6 flex border-t border-brown-dark">
+                        <div className="flex-1 relative my-10 overflow-hidden">
+                            <img src={apartmentFloorPlan} alt="Apartment floor plan" className="absolute top-0 left-0 w-full h-full object-contain" />
                         </div>
-                        <div className="flex-2 border-l border-brown-dark">
-                            <div className="px-6 grid grid-cols-[80px_1fr_120px] text-xl tracking-tight items-center border-b border-brown-dark h-16">
+                        <div className="flex-2">
+                            <div className="px-6 grid grid-cols-[80px_1fr_120px] text-xl tracking-tight items-center border-b border-brown-dark/50 h-16">
                                 <h3>BR</h3>
                                 <h3>Prostorija</h3>
                                 <h3>Kvadratura</h3>
@@ -64,7 +68,7 @@ export default function Apartment() {
                                         { title: "Terasa", value: "11.08" },
                                         { title: "Kupatilo", value: "4.96" },
                                     ].map(({ title, value }, index) => (
-                                        <li key={title} className="px-6 h-14 items-center grid grid-cols-[80px_1fr_120px] border-b border-brown-dark">
+                                        <li key={title} className="px-6 h-14 items-center grid grid-cols-[80px_1fr_120px] border-b border-brown-dark/50">
                                             <span className="text-brown-dark/50">{index < 9 ? 0 : ''}{index + 1}.</span>
                                             <span>{title}</span>
                                             <span>{value} m<sup>2</sup></span>
@@ -79,8 +83,8 @@ export default function Apartment() {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex border border-brown-dark border-t-0">
-                        <div className="flex-1 border-r border-brown-dark">
+                    <div className="mt-4 pt-2 pb-6 flex border-y border-brown-dark">
+                        <div className="flex-1">
                             <div className="px-6 text-center grid grid-cols-[2fr_3fr] text-xl tracking-tight items-center h-16">
                                 <h3>Sprat</h3>
                                 <h3>Br. Stana</h3>
@@ -95,7 +99,7 @@ export default function Apartment() {
                                         { title: "4", value: "34" },
                                         { title: "5", value: "43" },
                                     ].map(({ title, value }, index) => (
-                                        <li key={index} className="px-6 text-center h-14 items-center grid grid-cols-[2fr_3fr] border-t border-brown-dark">
+                                        <li key={index} className="px-6 text-center h-14 items-center grid grid-cols-[2fr_3fr] border-t border-brown-dark/50">
                                             <span>{title}</span>
                                             <span>{value}</span>
                                         </li>
@@ -109,8 +113,8 @@ export default function Apartment() {
                     </div>
                 </div>
             </section>
-            <section className="bg-brown-light px-10">
-                <div className="mx-auto max-w-large pt-20 pb-10">
+            <section className="px-10">
+                <div className="mx-auto max-w-large pb-30">
                     <h3 className="text-4xl tracking-tighter">Apartment images</h3>
                     <div className="flex gap-5 mt-12 min-h-[520px]">
                         <div className="rounded-sm overflow-hidden relative flex-1">
@@ -149,9 +153,13 @@ export default function Apartment() {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto max-w-large flex flex-col gap-4 items-center justify-center ">
+            </section>
+            <section className="bg-brown-light">
+                <div className="mx-auto py-20 max-w-large flex flex-col gap-4 items-center justify-center">
+                    <h2 className='text-[3rem] leading-[3.6rem] font-light tracking-tight text-center max-w-[24ch]'>"<span className="font-normal">Let the experts</span> help you make <span className="font-normal">the right investment</span>"</h2>
+                    <p className='text-lg text-center text-brown-dark/60'>Get in contact with us</p>
         
-                    <div className="mt-20 mb-20 flex flex-col w-full max-w-[1024px] gap-4">
+                    <div className="flex flex-col w-full max-w-[1024px] gap-4">
                         <div className="flex gap-8">
                             {
                                 [{ title: "Telegram", Icon: PiTelegramLogoLight }, { title: "WhatsApp", Icon: PiWhatsappLogoLight }].map(({ title, Icon }) => (

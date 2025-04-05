@@ -9,6 +9,7 @@ import APARTMENTS from "../assets/APARTMENTS.json";
 import { buildingImage1, buildingImage2, buildingImage3, buildingImage4, buildingImage5, buildingImage6, buildingImage7 } from '../assets/images';
 import { VscAdd } from 'react-icons/vsc';
 import { HiArrowRight } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const IMAGES = [buildingImage1, buildingImage2, buildingImage3, buildingImage4, buildingImage5];
 
@@ -55,25 +56,25 @@ export default function () {
                         {
                             APARTMENTS.slice(0, 5).map(({ id, name, city, address, }, index) => (
                                 <li key={id} className={`${index === 0 ? 'col-span-4' : 'col-span-2'}`}>
-                                    <a href="#" className="flex flex-col gap-4 h-full">
-                                    <div className={`${index !== 0 ? 'aspect-square' : ''} flex-1 w-full rounded-sm relative overflow-hidden`}>
-                                        <img src={IMAGES[index]} className="absolute top-0 left-0 w-full h-full object-cover" />
-                                        <div className="p-4 relative flex items-center gap-2 flex-wrap">
-                                            { 
-                                                ["For family", "For living", "For reselling", "Luxury"].map((item, index) => (
-                                                    <li key={index} className='flex items-center justify-center h-8 px-4 rounded-full bg-white/80 backdrop-blur-md'>
-                                                        <span className='text-sm whitespace-nowrap'>{item}</span>
-                                                    </li>
-                                                ))
-                                            }
+                                    <Link to="/apartment-groups/123/apartments" className="flex flex-col gap-4 h-full">
+                                        <div className={`${index !== 0 ? 'aspect-square' : ''} flex-1 w-full rounded-sm relative overflow-hidden`}>
+                                            <img src={IMAGES[index]} className="absolute top-0 left-0 w-full h-full object-cover" />
+                                            <div className="p-4 relative flex items-center gap-2 flex-wrap">
+                                                { 
+                                                    ["For family", "For living", "For reselling", "Luxury"].map((item, index) => (
+                                                        <li key={index} className='flex items-center justify-center h-8 px-4 rounded-full bg-white/80 backdrop-blur-md'>
+                                                            <span className='text-sm whitespace-nowrap'>{item}</span>
+                                                        </li>
+                                                    ))
+                                                }
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <h3 className='text-2xl text-gray-800'>{name}</h3>
-                                        <p className="mt-1 text-sm text-gray-400">{city}, {address}</p>
-                                        <p className='text-gray-800 text-base'>From {['1,388', '23,383', '33,331', '5,389'][Math.floor(Math.random() * 4)]} USD</p>
+                                        <div className="flex flex-col">
+                                            <h3 className='text-2xl text-gray-800'>{name}</h3>
+                                            <p className="mt-1 text-sm text-gray-400">{city}, {address}</p>
+                                            <p className='text-gray-800 text-base'>From {['1,388', '23,383', '33,331', '5,389'][Math.floor(Math.random() * 4)]} USD</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>
                             ))
                         }

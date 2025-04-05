@@ -9,7 +9,7 @@ import { Link, NavLink } from "react-router-dom";
 export default function Header() {
 
     return (
-        <header className='bg-white sticky top-0 z-10 px-10'>
+        <header className='bg-white/90 sticky top-0 z-[99999] px-10'>
             <div className="mx-auto max-w-large flex items-center justify-between h-20">
                 <Link to="/" className='flex items-center gap-2 text-brown-dark'>
                     <FaBuilding size={40} />
@@ -34,10 +34,10 @@ export default function Header() {
                         </ul>
                     </nav>
                     <div className="flex items-center gap-2">
-                        <NavLink to='/contact' className="flex items-center justify-center text-brown-light bg-brown-dark rounded-sm px-4 h-10">
+                        <NavLink to='/contact' className={({isActive}) => `flex items-center justify-center text-brown-light ${isActive ? 'bg-brown text-white' : 'bg-brown-dark hover:bg-brown hover:text-white'} rounded-sm px-4 h-10`}>
                             <span className='text-sm uppercase'>Contact</span>
                         </NavLink>
-                        <button className="w-10 aspect-square rounded-sm flex items-center justify-center text-gray-800 hover:bg-gray-100">
+                        <button className="w-10 aspect-square rounded-sm flex items-center justify-center text-brown-dark hover:bg-brown-dark/10">
                             <PiGlobeHemisphereEast size={20} />
                         </button>
                     </div>

@@ -25,6 +25,9 @@ import contactImage2 from "./contact-image2.jpg";
 
 import floorPlanImage from "./floor-plan.webp";
 
+import mapImage1 from "./map.jpg";
+import mapImage2 from "./map2.jpg";
+
 
 export {
     apartment3dImage1,
@@ -49,5 +52,7 @@ export {
     buildingInteriorImage4,
     contactImage1,
     contactImage2,
-    floorPlanImage
+    floorPlanImage,
+    mapImage1,
+    mapImage2
 }

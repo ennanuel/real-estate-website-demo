@@ -8,7 +8,7 @@ export const NAV_LINKS = [
     },
     {
         title: "Apartments",
-        link: "/apartment-groups/123/apartments"
+        link: "/apartment-groups"
     },
     {
         title: "Location",
